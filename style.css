@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --primary-color:rgb(62, 35, 80);
+    --color-white: #fff;
+    --color-black: rgb(46, 38, 24);
+}
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+.container {
+    
+    padding: 0.5%;
+}
+a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+p {
+    color: var(--color-black);
+    text-align: center;
+    width: 110%;
+}
+.mb {
+    margin-bottom: 4rem;
+    background-color: powderblue;
+    border: 1px solid powderblue;
+    padding: 50px 10px;
+    border-radius: 4px;
+}
+.heading-primary {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-left: 17%;
+    /* width: 110%; */
+}
+.heading-secondary {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+    /* padding-left: 15%; */
+    width: 110%;
+}
+header{
+    height: 10vh;
+    display: flex;
+}
+.main-nav {
+    width: 400%;
+    background-color: var(--primary-color);
+    padding-left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-nav ul,
+.sub-nav ul {
+    list-style:none;
+    display: flex;
+}
+.main-nav ul li a {
+    text-transform: capitalize;
+    padding-right: 2rem;
+}
+.logo {
+    font-size: 1.5rem;
+}
+.sub-nav {
+    width: 10%;
+    /* padding-right: 5%; */
+    padding-right: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sub-nav ul li a{
+    /* color: var(--primary-color); */
+    /* background-color: #f0eded; */
+    color: #f0eded;
+
+
+    /* padding-left: 1.5rem; */
+}
+ion-icon{
+    color: #f0eded;
+}
+.hero {
+    height: calc(100vh - 10vh);
+    display: flex;
+    justify-content: space-between;
+}
+.content {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-right: 1rem;
+    width: 110%;
+}
+.hero-img {
+    flex: 0 0 50%;
+}
+.hero-img img {
+    width: 100%;
+    height: 100%;
+}
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    padding: 0.5rem 1.5rem;
+    margin-top: 3rem;
+    margin-left: 20rem;
+}
+.good{
+    width: 10%;
+    height: 10%;
+}
+.bad{
+    width: 25%;
+}
+.description {
+    height: 50vh;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    gap: 4rem;
+    text-align: center;
+
+}
+.card {
+    margin-bottom: 2rem;
+    background: var(--bg-color);
+    border: 1px solid #f0eded;
+    padding: 50px 10px;
+    border-radius: 4px;
+}
+.card:hover{
+    box-shadow: 5px 30px 56.1276px rgb(55 55 55 / 125);
+    border: 1px solid transparent;
+    transform: translateY(0.2s);
+}
+/* .card .icon img {
+    width: 7rem;
+    height: auto;
+    margin-bottom: 3rem;
+} */
+.work {
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(30%, 1fr));
+    gap: 2rem;
+}
+.work img {
+    width: 50%;
+    height: 50%;
+}
+
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top:-6%;
+}
+.contact-form .row {
+    width: 50%;
+    display: flex;
+}
+.input50 {
+    width: 100%;
+    margin: 0 10px;
+}
+.input100 {
+    width: 100%;
+    margin: 0 10px;
+}
+.contact-form .row input,
+.contact-form .row textarea {
+    font-size: 1.2rem;
+    font-weight: 300;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: var(--color-black);
+    padding: 10px;
+    outline: none;
+    margin: 10px 0;
+}
+.contact-form .row textarea {
+    height: 100px;
+}
+.contact-form .row input[type="submit"] {
+    background-color: var(--primary-color) ;
+    color: var(--color-white);
+    border: 0;
+    cursor: pointer;
+} 
+@media(max-width:950px){
+    .hero-img,
+    .sub-nav{
+        display: none;
+    }
+    .content {
+        flex: 0 0 100%;
+    }
+    .main-nav{
+        width: 100%;
+    }
+    .contact-form form {
+        width: 100%;
+        background-color: pink;
+    }
+    .contact-form .row{
+        flex-direction: column;
+    }
+    .contact-form .input100,
+    .contact-form .input50 {
+        width: 75%;
+    }
+}
